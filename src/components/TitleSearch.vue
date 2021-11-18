@@ -23,7 +23,7 @@ export default {
       .then((response) => {
         console.log(this.movies)
         this.movies = response.data.results
-        console.log(this.movies.)
+        console.log(this.movies)
       })
       .catch((Error) => {
         console.log(Error, 'ERRORE!')
