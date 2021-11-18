@@ -1,6 +1,10 @@
 <template>
+<!-- componente per l'input dell'utente -->
   <div id="titleSearch">
+
+    <!-- titolo inserito dall'utente -->
     <input type="text" name="searchByTitle" id="searchByTitle">
+
     <button name="search" @click="findTitle">Search</button>
   </div>
 </template>
@@ -34,9 +38,6 @@ export default {
       })
   },
   methods: {
-    finTitle () {
-      console.log(this.text.value)
-    }
   }
 }
 </script>

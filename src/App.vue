@@ -2,6 +2,8 @@
   <!-- BOOLFLIX -->
   <!-- sito di distribuzione di film e serie tv -->
   <div id="app">
+
+    <!-- input per cercare un film tramite titolo -->
     <TitleSearch />
   </div>
 </template>
