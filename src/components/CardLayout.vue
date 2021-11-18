@@ -1,10 +1,10 @@
 <template>
   <div id="CardLayout">
 
-    <h2>{{ title }}</h2>
-    <h2>{{ original_title }}</h2>
-    <h3>{{ original_language }}</h3>
-    <h3>{{ vote_average }}</h3>
+    <h2>Titolo del film: {{ title }}</h2>
+    <h2>Titolo originale: {{ original_title }}</h2>
+    <h3>Lingua originale: {{ original_language }}</h3>
+    <h3>Valtazione media: {{ vote_average }}</h3>
   </div>
 </template>
 
