@@ -1,7 +1,7 @@
 <template>
   <div id="titleSearch">
-    <input type="text" name="searchByTitle">
-    <button name="search">Search</button>
+    <input type="text" name="searchByTitle" id="searchByTitle">
+    <button name="search" @click="findTitle">Search</button>
   </div>
 </template>
 
@@ -13,13 +13,16 @@ export default {
   data () {
     return {
       erroe: '',
-      movies: []
+      movies: [],
+      findTitle () {
+        console.log(this.searchByTitle)
+      }
     }
   },
 
   mounted () {
     axios
-      .get('https://api.themoviedb.org/3/search/movie?api_key=8132756f90b9196d3a74d67879dedc3c&query=avatar')
+      .get('https://api.themoviedb.org/3/search/movie?api_key=8132756f90b9196d3a74d67879dedc3c&query=mad max')
       .then((response) => {
         console.log(this.movies)
         this.movies = response.data.results
@@ -29,6 +32,11 @@ export default {
         console.log(Error, 'ERRORE!')
         this.error = `ERRORE ${Error}`
       })
+  },
+  methods: {
+    finTitle () {
+      console.log(this.text.value)
+    }
   }
 }
 </script>
