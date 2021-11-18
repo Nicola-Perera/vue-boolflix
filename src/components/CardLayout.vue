@@ -1,0 +1,24 @@
+<template>
+  <div id="CardLayout">
+
+    <h2>{{ title }}</h2>
+    <h2>{{ original_title }}</h2>
+    <h3>{{ original_language }}</h3>
+    <h3>{{ vote_average }}</h3>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'CardLayout',
+  props: {
+    original_title: String,
+    title: String,
+    original_language: String,
+    vote_average: Number
+  }
+}
+</script>
+
+<style lang="scss">
+</style>

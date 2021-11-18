@@ -6,14 +6,28 @@
     <input type="text" name="searchByTitle" id="searchByTitle">
 
     <button name="search" @click="findTitle">Search</button>
+
+    <div class="search_results">
+      <CardLayout
+      v-for="movie in movies"
+        :title="movie.title"
+        :original_title="movie.original_title"
+        :original_language="movie.original_language"
+        :vote_average="movie.vote_average"
+        :key="movie.id"/>
+    </div>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
+import CardLayout from './CardLayout.vue'
 
 export default {
   name: 'titleSearch',
+  components: {
+    CardLayout
+  },
   data () {
     return {
       erroe: '',
@@ -26,7 +40,7 @@ export default {
 
   mounted () {
     axios
-      .get('https://api.themoviedb.org/3/search/movie?api_key=8132756f90b9196d3a74d67879dedc3c&query=mad max')
+      .get('https://api.themoviedb.org/3/search/movie?api_key=8132756f90b9196d3a74d67879dedc3c&query=spiderman')
       .then((response) => {
         console.log(this.movies)
         this.movies = response.data.results
