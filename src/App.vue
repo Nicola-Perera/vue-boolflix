@@ -1,16 +1,20 @@
 <template>
-
-<!-- BOOLFLIX -->
-<!-- sito di distribuzione di film e serie tv -->
+  <!-- BOOLFLIX -->
+  <!-- sito di distribuzione di film e serie tv -->
   <div id="app">
-
+    <TitleSearch />
   </div>
 </template>
 
 <script>
+import TitleSearch from './components/TitleSearch.vue'
 
+export default {
+  components: {
+    TitleSearch
+  }
+}
 </script>
 
 <style lang="scss">
-
 </style>
