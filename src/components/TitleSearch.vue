@@ -3,9 +3,9 @@
   <div id="titleSearch">
 
     <!-- titolo inserito dall'utente -->
-    <input type="text" name="searchByTitle" id="searchByTitle">
+    <input type="text" name="searchByTitle" v-model="title">
 
-    <button name="search" @click="findTitle">Search</button>
+    <button name="search" @click="getValue()">Search</button>
 
     <div class="search_results">
       <CardLayout
@@ -31,10 +31,7 @@ export default {
   data () {
     return {
       erroe: '',
-      movies: [],
-      findTitle () {
-        console.log(this.searchByTitle)
-      }
+      movies: []
     }
   },
 
@@ -52,6 +49,9 @@ export default {
       })
   },
   methods: {
+    getValue () {
+      console.log(this.name.value)
+    }
   }
 }
 </script>
