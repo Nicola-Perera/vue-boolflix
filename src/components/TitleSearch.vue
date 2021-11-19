@@ -71,7 +71,7 @@ export default {
             } else {
               console.log('no flag')
             }
-            element.flag = 'bandiera'
+            element.flag = `https://www.google.it/search?q=bandiera+${element.original_language}&hl=it&authuser=0&tbm=isch&source=hp&biw=1280&bih=721&ei=lJCXYbmnBseNxc8P9IGQyAI&iflsig=ALs-wAMAAAAAYZeepBlcPPvtsVjqyfDUIUS0Rel06cOr&ved=0ahUKEwi5wd-Or6T0AhXHRvEDHfQABCkQ4dUDCAY&uact=5&oq=bandiera+it&gs_lcp=CgNpbWcQAzIICAAQgAQQsQMyCAgAEIAEELEDMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQ6CwgAEIAEELEDEIMBOggIABCxAxCDAToECAAQA1DvBFjOFWC8GGgBcAB4AIABdogBvwaSAQQxMC4xmAEAoAEBqgELZ3dzLXdpei1pbWewAQA&sclient=img#imgrc=UfE7dDLh2BqBfM`
           })
           // console.log(this.movies[1].original_language)
         })

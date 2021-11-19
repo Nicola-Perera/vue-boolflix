@@ -4,7 +4,7 @@
     <h2>Titolo del film: {{ title }}</h2>
     <h2>Titolo originale: {{ original_title }}</h2>
     <h3>Lingua originale: {{ original_language }}</h3>
-    <h3>Bandiera: {{ flag }}</h3>
+    <img v-bind:src="flag" alt="language flag"/>
     <h3>Valtazione media: {{ vote_average }}</h3>
   </div>
 </template>
