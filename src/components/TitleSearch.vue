@@ -14,6 +14,7 @@
         :original_title="movie.original_title"
         :original_language='movie.original_language + " ciao" '
         :vote_average="movie.vote_average"
+        :flag="movie.flag"
         :key="movie.id"
       />
     </div>
@@ -50,11 +51,7 @@ export default {
 
           // alla lista restituita aggiungo la chiave con la bandiera corrispondente alla lingua originale ad ogni oggetto
           this.movies.forEach(element => {
-            const languageFlag = {}
-            const key = 'flag'
-            const value = 'bandiera'
-            languageFlag[key] = value
-            element.push(languageFlag)
+            element.flag = 'bandiera'
           })
           console.log(this.movies[1].original_language)
         })
