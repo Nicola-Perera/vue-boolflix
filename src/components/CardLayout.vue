@@ -4,7 +4,7 @@
     <h2>Titolo del film: {{ title }}</h2>
     <h2>Titolo originale: {{ original_title }}</h2>
     <h3>Lingua originale: {{ original_language }}</h3>
-    <img v-bind:src="flag" alt="language flag"/>
+    <img :src="'../assets/img/flags/flag_' + original_language + '.png'" :alt="'Language ' + original_language + ' flag'">
     <h3>Valtazione media: {{ vote_average }}</h3>
   </div>
 </template>
@@ -16,8 +16,7 @@ export default {
     original_title: String,
     title: String,
     original_language: String,
-    vote_average: Number,
-    flag: String
+    vote_average: Number
   }
 }
 </script>
