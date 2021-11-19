@@ -1,5 +1,5 @@
 <template>
-  <div id="CardLayout">
+  <div id="MoviesLayout">
 
     <h2>Titolo del film: {{ title }}</h2>
     <h2>Titolo originale: {{ original_title }}</h2>
@@ -7,13 +7,13 @@
       <h3>Lingua originale: {{ original_language }}</h3>
       <img :src="require('../assets/img/flags/flag_' + original_language + '.png')" :alt="'Language ' + original_language + ' flag'">
     </div>
-    <h3>Valtazione media: {{ vote_average }}</h3>
+    <h3>Valutazione media: {{ vote_average }}</h3>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'CardLayout',
+  name: 'MoviesLayout',
   props: {
     original_title: String,
     title: String,
