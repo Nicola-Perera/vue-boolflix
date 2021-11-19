@@ -12,7 +12,7 @@
         v-for="movie in movies"
         :title='movie.title'
         :original_title="movie.original_title"
-        :original_language='movie.original_language + " ciao" '
+        :original_language='movie.original_language'
         :vote_average="movie.vote_average"
         :flag="movie.flag"
         :key="movie.id"
@@ -51,9 +51,29 @@ export default {
 
           // alla lista restituita aggiungo la chiave con la bandiera corrispondente alla lingua originale ad ogni oggetto
           this.movies.forEach(element => {
+            // abbino alle principali lingue le loro bandiere
+            if (element.original_language === 'en') {
+              console.log('english')
+            } else if (element.original_language === 'fr') {
+              console.log('french')
+            } else if (element.original_language === 'de') {
+              console.log('german')
+            } else if (element.original_language === 'it') {
+              console.log('italian')
+            } else if (element.original_language === 'pt') {
+              console.log('portuguese')
+            } else if (element.original_language === 'ru') {
+              console.log('russian')
+            } else if (element.original_language === 'es') {
+              console.log('spanish')
+            } else if (element.original_language === 'da') {
+              console.log('danish')
+            } else {
+              console.log('no flag')
+            }
             element.flag = 'bandiera'
           })
-          console.log(this.movies[1].original_language)
+          // console.log(this.movies[1].original_language)
         })
         .catch((Error) => {
           console.log(Error, 'ERRORE!')
