@@ -1,10 +1,18 @@
 <template>
-  <!-- componente per l'input dell'utente -->
-  <div id="titleSearch">
-    <!-- titolo inserito dall'utente -->
-    <input type="text" name="searchByTitle" v-model="title" />
 
-    <button name="search" @click="callApi()">Search</button>
+  <div id="searchByTitle">
+    <header>
+
+      <div id="search">
+      <!-- inout dell'utente per cercare film o serie tv -->
+      <input type="text" placeholder="search" name="searchByTitle" v-model="title" />
+      <button name="search" @click="callApi()">Search</button>
+
+      </div>
+
+    </header>
+
+    <main>
 
     <div class="search_results">
       <div class="movies">
@@ -13,6 +21,7 @@
         v-for="movie in movies"
         :title="movie.title"
         :original_title="movie.original_title"
+        :poster="'https://image.tmdb.org/t/p/' + 'w342' + movie.poster_path"
         :original_language="movie.original_language"
         :vote_average="movie.vote_average"
         :key="movie.id"
@@ -25,12 +34,15 @@
         v-for="serie in series"
         :name="serie.title"
         :original_name="serie.original_name"
+        :poster="'https://image.tmdb.org/t/p/' + 'w342' + serie.poster_path"
         :original_language="serie.original_language"
         :vote_average="serie.vote_average"
         :key="serie.id"
       />
       </div>
     </div>
+
+    </main>
   </div>
 </template>
 
@@ -40,7 +52,7 @@ import MoviesLayout from './MoviesLayout.vue'
 import SeriesLayout from './SeriesLayout.vue'
 
 export default {
-  name: 'titleSearch',
+  name: 'search_results',
   components: {
     MoviesLayout,
     SeriesLayout
@@ -50,6 +62,8 @@ export default {
       api_key: '8132756f90b9196d3a74d67879dedc3c',
       movies_url: 'https://api.themoviedb.org/3/search/movie',
       series_url: 'https://api.themoviedb.org/3/search/tv',
+      poster_base: 'https://image.tmdb.org/t/p/',
+      poster_size: 'w342',
       errore: '',
       title: '',
       movies_section: '',
@@ -68,6 +82,9 @@ export default {
         )
         .then((response) => {
           console.log(response.data.results)
+          console.log(this.poster_base)
+          console.log(this.poster_size)
+          console.log(response.data.results[1].backdrop_path)
           this.movies = response.data.results
         })
         .catch((Error) => {
@@ -80,6 +97,9 @@ export default {
         )
         .then((response) => {
           console.log(response.data.results)
+          console.log(this.poster_base)
+          console.log(this.poster_size)
+          console.log(response.data.results[1].backdrop_path)
           this.series = response.data.results
         })
         .catch((Error) => {
