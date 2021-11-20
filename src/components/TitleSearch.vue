@@ -49,6 +49,7 @@ export default {
     return {
       api_key: '8132756f90b9196d3a74d67879dedc3c',
       movies_url: 'https://api.themoviedb.org/3/search/movie',
+      series_url: 'https://api.themoviedb.org/3/search/tv',
       errore: '',
       title: '',
       movies_section: '',
@@ -63,7 +64,7 @@ export default {
     callApi () {
       axios
         .get(
-          `https://api.themoviedb.org/3/search/movie?api_key=8132756f90b9196d3a74d67879dedc3c&query=${this.title}`
+          `${this.movies_url}?api_key=${this.api_key}&query=${this.title}`
         )
         .then((response) => {
           console.log(response.data.results)
@@ -75,7 +76,7 @@ export default {
         })
       axios
         .get(
-          `https://api.themoviedb.org/3/search/tv?api_key=8132756f90b9196d3a74d67879dedc3c&language=en-US&page=1&query=${this.title}`
+          `${this.series_url}?api_key=${this.api_key}&query=${this.title}`
         )
         .then((response) => {
           console.log(response.data.results)

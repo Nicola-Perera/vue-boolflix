@@ -4,7 +4,7 @@
     <h2>Nome della serie: {{ name }}</h2>
     <h2>Nome originale: {{ original_name }}</h2>
     <div class="language">
-      <h3>Lingua originale: {{ original_Language }}</h3>
+      <h3>Lingua originale: {{ original_language }}</h3>
       <img :src="require('../assets/img/flags/flag_' + original_language + '.png')" :alt="'Language ' + original_language + ' flag'">
     </div>
     <h3>Valutazione media: {{ vote_average }}</h3>
