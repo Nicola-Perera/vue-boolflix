@@ -8,7 +8,7 @@
 
       <!-- title -->
       <h2>Nome della serie: {{ name }}</h2>
-      <h2>Nome originale: {{ original_name }}</h2>
+      <h2 class="main_title">Nome originale: {{ original_name }}</h2>
 
       <!-- language -->
       <div class="language">

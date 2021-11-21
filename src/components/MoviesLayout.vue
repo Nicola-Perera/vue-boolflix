@@ -8,7 +8,7 @@
 
       <!-- title -->
       <h2 v-if="title != original_title">Titolo del film: {{ title }}</h2>
-      <h2>Titolo originale: {{ original_title }}</h2>
+      <h2 class="main_title">Titolo originale: {{ original_title }}</h2>
 
       <!-- language -->
       <div class="language">

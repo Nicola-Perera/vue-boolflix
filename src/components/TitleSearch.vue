@@ -180,7 +180,7 @@ export default {
 
     // cards container
     .search_results {
-      padding-top: 3rem;
+      padding: 3rem;
 
     }
   }

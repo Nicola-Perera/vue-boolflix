@@ -1,20 +1,34 @@
 // media card attributes
-.language {
-    width: 5%;
-    img {
-      width: 100%;
-    }
-  }
-
 .card {
     width: calc(100% / 4);
     padding: 0 1rem;
+    margin-bottom: 2rem;
 
     .content {
         background-color: var(--secondary-color);
+        color: black;
+        .main_title {
+            color: white;
+        }
+        h2 {
+            font-size: 1rem;
+            text-align: center;
+            padding: .5rem 1rem;
+        }
+        h3 {
+            width: 100%;
+        }
+        .stars_rating {
+            color: gold;
+        }
         img {
             width: 100%;
         }
+        .language {
+            img {
+                width: 10%;
+            }
+          }
     }
 }
 
