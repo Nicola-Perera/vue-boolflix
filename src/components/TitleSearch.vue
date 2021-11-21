@@ -9,7 +9,7 @@
 
       <div class="inputs">
       <!-- input dell'utente per cercare film o serie tv -->
-      <input id="search_input" type="text" placeholder="search for a title" name="searchByTitle" v-model="title" />
+      <input id="search_input" type="text" placeholder="Search for a title" name="searchByTitle" v-model="title" />
       <button id="search_button" name="search" @click="callApi()">GO</button>
 
       </div>
@@ -126,21 +126,25 @@ export default {
   @import "../assets/scss/common_rules.scss";
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
 
+// header rules
   header {
+    width: 100%;
     padding: 1rem 3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    // position: fixed;
     background-color: var(--secondary-color);
 
     #logo {
-        height: 50px;
+      height: 50px;
 
-        img {
-          height: 100%;
-        }
+      img {
+        height: 100%;
       }
+    }
 
+      // search title
     .inputs {
       font-family: inherit;
 
@@ -168,5 +172,7 @@ export default {
         padding: .5rem;
       }
     }
-    }
+  }
+
+  // main
 </style>

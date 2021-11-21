@@ -2,7 +2,7 @@
   <div id="MoviesLayout">
 
     <!-- title -->
-    <h2>Titolo del film: {{ title }}</h2>
+    <h2 v-if="title != original_title">Titolo del film: {{ title }}</h2>
     <h2>Titolo originale: {{ original_title }}</h2>
     <img :src="poster" :alt="original_title + ' poster'">
 
