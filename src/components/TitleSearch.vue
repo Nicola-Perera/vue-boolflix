@@ -24,6 +24,7 @@
         :poster="'https://image.tmdb.org/t/p/' + 'w342' + movie.poster_path"
         :original_language="movie.original_language"
         :vote_average="movie.vote_average"
+        :stars_rating="fiveStars(movie.vote_average)"
         :key="movie.id"
       />
       </div>
@@ -37,6 +38,7 @@
         :poster="'https://image.tmdb.org/t/p/' + 'w342' + serie.poster_path"
         :original_language="serie.original_language"
         :vote_average="serie.vote_average"
+        :stars_rating="fiveStars(serie.vote_average)"
         :key="serie.id"
       />
       </div>
@@ -76,36 +78,37 @@ export default {
 
   methods: {
     callApi () {
+      // Movies API
       axios
         .get(
           `${this.movies_url}?api_key=${this.api_key}&query=${this.title}`
         )
         .then((response) => {
           console.log(response.data.results)
-          console.log(this.poster_base)
-          console.log(this.poster_size)
-          console.log(response.data.results[1].backdrop_path)
           this.movies = response.data.results
         })
         .catch((Error) => {
           console.log(Error, 'ERRORE!')
           this.error = `ERRORE ${Error}`
         })
+
+      // TV Series API
       axios
         .get(
           `${this.series_url}?api_key=${this.api_key}&query=${this.title}`
         )
         .then((response) => {
           console.log(response.data.results)
-          console.log(this.poster_base)
-          console.log(this.poster_size)
-          console.log(response.data.results[1].backdrop_path)
           this.series = response.data.results
         })
         .catch((Error) => {
           console.log(Error, 'ERRORE!')
           this.error = `ERRORE ${Error}`
         })
+    },
+    // stars-rating function
+    fiveStars (vote) {
+      return (vote / 2).toFixed()
     }
   }
 }
