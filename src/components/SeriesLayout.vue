@@ -1,23 +1,29 @@
 <template>
-  <div id="SeriesLayout">
+  <div class="serie card">
 
-    <!-- title -->
-    <h2>Nome della serie: {{ name }}</h2>
-    <h2>Nome originale: {{ original_name }}</h2>
-    <img :src="poster" :alt="original_name + ' poster'">
+    <div class="content">
 
-    <!-- language -->
-    <div class="language">
-      <h3>Lingua originale: {{ original_language }}</h3>
-      <img :src="require('../assets/img/flags/flag_' + original_language + '.png')" :alt="'Language ' + original_language + ' flag'">
-    </div>
+      <!-- media poster -->
+      <img :src="poster" :alt="original_name + ' poster'">
 
-    <!-- rating -->
-    <h3>Valutazione media: {{ vote_average }}</h3>
+      <!-- title -->
+      <h2>Nome della serie: {{ name }}</h2>
+      <h2>Nome originale: {{ original_name }}</h2>
 
-    <div class="stars_rating">
-      <span v-for="star in fullStars" :key="star"> &starf; </span>
-      <span v-for="star in emptyStars" :key="star"> &star; </span>
+      <!-- language -->
+      <div class="language">
+        <h3>Lingua originale: {{ original_language }}</h3>
+        <img :src="require('../assets/img/flags/flag_' + original_language + '.png')" :alt="'Language ' + original_language + ' flag'">
+      </div>
+
+      <!-- rating -->
+      <h3>Valutazione media: {{ vote_average }}</h3>
+
+      <div class="stars_rating">
+        <span v-for="star in fullStars" :key="star"> &starf; </span>
+        <span v-for="star in emptyStars" :key="star"> &star; </span>
+      </div>
+
     </div>
 
   </div>
@@ -50,10 +56,6 @@ export default {
 </script>
 
 <style lang="scss">
-.language {
-  width: 5%;
-  img {
-    width: 100%;
-  }
-}
+@import "../assets/scss/common_rules.scss";
+@import "../assets/scss/card_style.scss";
 </style>

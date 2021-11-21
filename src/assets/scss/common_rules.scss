@@ -13,3 +13,9 @@
     --secondary-color: #373b69;
     --send-input-color: #b7c8c2;
 }
+
+// position
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}

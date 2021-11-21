@@ -18,8 +18,8 @@
 
     <main>
 
-    <div class="search_results">
-      <div class="movies">
+    <div class="search_results container">
+      <div class="movies container">
       <MoviesLayout
         v-model="movies_section"
         v-for="movie in movies"
@@ -33,7 +33,7 @@
       />
       </div>
 
-      <div class="series">
+      <div class="series container">
       <SeriesLayout
         v-model="series_section"
         v-for="serie in series"
@@ -122,6 +122,7 @@ export default {
 <style lang="scss">
 .search_results {
   display: flex;
+  justify-content: space-between
 }
   @import "../assets/scss/common_rules.scss";
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
@@ -175,4 +176,12 @@ export default {
   }
 
   // main
+  main {
+
+    // cards container
+    .search_results {
+      padding-top: 3rem;
+
+    }
+  }
 </style>
