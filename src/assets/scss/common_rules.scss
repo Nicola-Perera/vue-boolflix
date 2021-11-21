@@ -1,7 +1,15 @@
 // common and general rules
 
+// general
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+// colors
+:root {
+    --primary-color: #22254b;
+    --secondary-color: #373b69;
+    --send-input-color: #b7c8c2;
 }

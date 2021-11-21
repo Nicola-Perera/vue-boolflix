@@ -3,8 +3,15 @@
   <!-- sito di distribuzione di film e serie tv -->
   <div id="app">
 
-    <!-- input per cercare un film tramite titolo -->
-    <TitleSearch />
+    <main>
+
+      <!-- search by title section -->
+      <div id="search">
+        <TitleSearch />
+      </div>
+
+    </main>
+
   </div>
 </template>
 
@@ -19,5 +26,11 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./assets/scss/common_rules.scss";
+  @import "./assets/scss/common_rules.scss";
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+
+  #app {
+    background-color: var(--primary-color);
+  }
+
 </style>

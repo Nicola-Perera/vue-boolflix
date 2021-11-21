@@ -3,10 +3,14 @@
   <div id="searchByTitle">
     <header>
 
-      <div id="search">
-      <!-- inout dell'utente per cercare film o serie tv -->
-      <input type="text" placeholder="search" name="searchByTitle" v-model="title" />
-      <button name="search" @click="callApi()">Search</button>
+      <div id="logo">
+        <img src="https://image.tmdb.org/t/p/w342/wwemzKWzjKYJFfCeiB57q3r4Bcm.png" alt="Netflix logo">
+      </div>
+
+      <div class="inputs">
+      <!-- input dell'utente per cercare film o serie tv -->
+      <input id="search_input" type="text" placeholder="search for a title" name="searchByTitle" v-model="title" />
+      <button id="search_button" name="search" @click="callApi()">GO</button>
 
       </div>
 
@@ -119,4 +123,50 @@ export default {
 .search_results {
   display: flex;
 }
+  @import "../assets/scss/common_rules.scss";
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+
+  header {
+    padding: 1rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+
+    #logo {
+        height: 50px;
+
+        img {
+          height: 100%;
+        }
+      }
+
+    .inputs {
+      font-family: inherit;
+
+      #search_input {
+        &::placeholder {
+          color: #7378c5;
+        }
+        &:focus {
+          outline: 0;
+          background-color: var(--primary-color);
+        }
+
+        background-color: transparent;
+        border: 2px solid var(--primary-color);
+        border-radius: 2rem;
+        padding: .5rem 1rem;
+        margin-right: 1rem;
+        font-size: 1rem;
+        color: #fff;
+      }
+
+      #search_button {
+        background-color: var(--send-input-color);
+        border-radius: 2rem;
+        padding: .5rem;
+      }
+    }
+    }
 </style>
