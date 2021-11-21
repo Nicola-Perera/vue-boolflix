@@ -24,6 +24,12 @@
         <span v-for="star in emptyStars" :key="star"> &star; </span>
       </div>
 
+      <!-- overview -->
+      <div class="overview">
+        <h3 v-if="overview != ''">Overview</h3>
+        <p>{{ overview }}</p>
+      </div>
+
     </div>
 
   </div>
@@ -43,6 +49,7 @@ export default {
     title: String,
     original_language: String,
     poster: String,
+    overview: String,
     vote_average: Number,
     stars_rating: Number
   },

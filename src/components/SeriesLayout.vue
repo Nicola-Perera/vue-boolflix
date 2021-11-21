@@ -16,6 +16,10 @@
         <img :src="require('../assets/img/flags/flag_' + original_language + '.png')" :alt="'Language ' + original_language + ' flag'">
       </div>
 
+      <div class="overview">
+        <p>{{ overview }}</p>
+      </div>
+
       <!-- rating -->
       <h3>Valutazione media: {{ vote_average }}</h3>
 

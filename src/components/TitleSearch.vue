@@ -29,6 +29,7 @@
         :original_language="movie.original_language"
         :vote_average="movie.vote_average"
         :stars_rating="fiveStars(movie.vote_average)"
+        :overview="movie.overview"
         :key="movie.id"
       />
       </div>
