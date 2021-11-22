@@ -33,8 +33,8 @@
 
           <h3>Voto:</h3>
           <div class="stars_rating">
-            <span v-for="star in fullStars" :key="star"> &starf; </span>
-            <span v-for="star in emptyStars" :key="star"> &star; </span>
+            <span v-for="star in stars_rating" :key="star"> &starf; </span>
+            <span v-for="star in (5 - stars_rating)" :key="star"> &star; </span>
           </div>
 
           <h3>Overview</h3>
@@ -65,13 +65,6 @@ export default {
     overview: String,
     vote_average: Number,
     stars_rating: Number
-  },
-  mounted () {
-    console.log('movie')
-    console.log(this.stars_rating)
-    this.fullStars = this.stars_rating
-    this.emptyStars = 5 - this.fullStars
-    this.fullStars = 5 - this.emptyStars
   }
 }
 </script>

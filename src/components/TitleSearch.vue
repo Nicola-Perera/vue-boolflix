@@ -115,7 +115,7 @@ export default {
     },
     // stars-rating function
     fiveStars (vote) {
-      return (vote / 2).toFixed()
+      return Number((vote / 2).toFixed())
     }
   }
 }
@@ -128,6 +128,7 @@ export default {
   justify-content: space-between
 }
   @import "../assets/scss/common_rules.scss";
+  // @import "../assets/scss/genres_filter.scss";
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
 
 // header rules
