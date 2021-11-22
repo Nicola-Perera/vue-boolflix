@@ -18,6 +18,12 @@
 
     <main>
 
+      <div id="genres" class="container">
+        <div v-for="genre in genres" :key="genre.id">
+          <h2>{{ genre.name }}</h2>
+        </div>
+      </div>
+
     <div class="search_results container">
       <div class="movies container">
       <MoviesLayout
@@ -182,6 +188,11 @@ export default {
   // main
   main {
 
+    // genres filter
+    #genres {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
     // cards container
     .search_results {
       padding: 3rem;
