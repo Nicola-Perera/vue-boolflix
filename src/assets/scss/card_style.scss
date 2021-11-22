@@ -9,6 +9,7 @@
         color: black;
         position: relative;
         min-height: 580px;
+        box-shadow: 5px 10px 13px -7px #000000;
         &:hover .overview {
             display: block;
             transform: translateY(0);
