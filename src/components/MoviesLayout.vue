@@ -28,6 +28,15 @@
       <div v-if="overview != ''">
         <div class="overview">
 
+          <h3>Titolo:</h3>
+          <p>{{ original_title }}</p>
+
+          <h3>Voto:</h3>
+          <div class="stars_rating">
+            <span v-for="star in fullStars" :key="star"> &starf; </span>
+            <span v-for="star in emptyStars" :key="star"> &star; </span>
+          </div>
+
           <h3>Overview</h3>
           <p>{{ overview }}</p>
 
