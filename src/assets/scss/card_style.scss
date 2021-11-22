@@ -8,6 +8,7 @@
         background-color: var(--secondary-color);
         color: black;
         position: relative;
+        min-height: 580px;
         &:hover .overview {
             display: block;
             transform: translateY(0);
