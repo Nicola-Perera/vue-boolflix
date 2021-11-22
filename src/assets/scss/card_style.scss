@@ -9,6 +9,7 @@
         color: black;
         position: relative;
         &:hover .overview {
+            display: block;
             transform: translateY(0);
         }
         .main_title {
@@ -43,6 +44,7 @@
             max-height: 100%;
             transform: translateY(150%);
             transition: transform .3s ease-in;
+            display: none;
             overflow: scroll;
             h3 {
                 text-align: center;
