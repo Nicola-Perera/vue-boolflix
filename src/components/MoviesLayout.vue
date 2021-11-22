@@ -4,7 +4,7 @@
     <div class="content">
 
       <!-- media poster -->
-      <img :src="poster" :alt="original_title + ' poster'">
+      <img v-if="poster != null" :src="poster" :alt="original_title + ' poster'">
 
       <!-- title -->
       <h2 v-if="title != original_title">Titolo del film: {{ title }}</h2>

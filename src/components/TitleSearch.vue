@@ -19,7 +19,7 @@
     <main>
 
       <div id="genres" class="container">
-        <div v-for="genre in genres" :key="genre.id">
+        <div v-for="genre in genres" class="genre" :class="genre.name" :key="genre.id">
           <h2>{{ genre.name }}</h2>
         </div>
       </div>
@@ -134,7 +134,7 @@ export default {
   justify-content: space-between
 }
   @import "../assets/scss/common_rules.scss";
-  // @import "../assets/scss/genres_filter.scss";
+  @import "../assets/scss/genres_filter.scss";
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
 
 // header rules
