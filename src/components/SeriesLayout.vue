@@ -20,8 +20,8 @@
       <h3>Valutazione media: {{ vote_average }}</h3>
 
       <div class="stars_rating">
-        <span v-for="star in fullStars" :key="star"> &starf; </span>
-        <span v-for="star in emptyStars" :key="star"> &star; </span>
+        <span v-for="star in stars_rating" :key="star"> &starf; </span>
+        <span v-for="star in (5 - stars_rating)" :key="star"> &star; </span>
       </div>
 
       <!-- overview -->
