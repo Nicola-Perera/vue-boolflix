@@ -25,9 +25,13 @@
       </div>
 
       <!-- overview -->
-      <div class="overview">
-        <h3 v-if="overview != ''">Overview</h3>
-        <p>{{ overview }}</p>
+      <div v-if="overview != ''">
+        <div class="overview">
+
+          <h3>Overview</h3>
+          <p>{{ overview }}</p>
+
+        </div>
       </div>
 
     </div>

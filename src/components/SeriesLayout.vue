@@ -16,16 +16,22 @@
         <img :src="require('../assets/img/flags/flag_' + original_language + '.png')" :alt="'Language ' + original_language + ' flag'">
       </div>
 
-      <div class="overview">
-        <p>{{ overview }}</p>
-      </div>
-
       <!-- rating -->
       <h3>Valutazione media: {{ vote_average }}</h3>
 
       <div class="stars_rating">
         <span v-for="star in fullStars" :key="star"> &starf; </span>
         <span v-for="star in emptyStars" :key="star"> &star; </span>
+      </div>
+
+      <!-- overview -->
+      <div v-if="overview != ''">
+        <div class="overview">
+
+          <h3>Overview</h3>
+          <p>{{ overview }}</p>
+
+        </div>
       </div>
 
     </div>
@@ -47,6 +53,7 @@ export default {
     name: String,
     original_language: String,
     poster: String,
+    overview: String,
     vote_average: Number,
     stars_rating: Number
   },

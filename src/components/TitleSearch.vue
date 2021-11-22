@@ -44,6 +44,7 @@
         :original_language="serie.original_language"
         :vote_average="serie.vote_average"
         :stars_rating="fiveStars(serie.vote_average)"
+        :overview="serie.overview"
         :key="serie.id"
       />
       </div>
